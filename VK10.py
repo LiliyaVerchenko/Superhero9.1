@@ -25,10 +25,9 @@ class User:
                                  params={'access_token': self.token, 'user_ids': id, 'fields': 'domain',
                                          'v': '5.120'}).json()['response'][0]['domain']
             user_link1.append(os.path.join(url, user_link)) # получаем ссылку путем склеивания URL и domain
-        for link in user_link1:
-            print(link)
+        for user in user_link1:
+            print(user)
         return
-
 
 user1 = User(user_id_1, token)
 user2 = User(user_id_2, token)
